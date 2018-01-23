@@ -1,0 +1,12 @@
+{
+  "name": "用户服务接口文档",
+  "version": "0.1.0",
+  "title": "用户服务接口文档",
+  "url": "https://XXXXX.com/v1",
+  "order": [
+  ],
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+}

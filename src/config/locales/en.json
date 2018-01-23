@@ -1,0 +1,8 @@
+{
+  "hello": "English",
+  "i18n": "Internationalization and Localization",
+  "validateError": {
+    "1400": "request params error"
+  }
+
+}
