@@ -25,4 +25,5 @@ test.serial('create captcha', async t => {
     let captchaInRedis = await think.mmdb.hgetall(captchaKey);
 
     t.is(captcha.value, captchaInRedis.value);
+    // TODO 有bug，数据类型问题 t.is(captcha.verified, captchaInRedis.verified);
 });
