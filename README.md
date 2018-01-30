@@ -1,6 +1,4 @@
 
-Application created by [ThinkJS](http://www.thinkjs.org)
-
 ## Install dependencies
 
 ```
@@ -13,10 +11,20 @@ npm install
 npm start
 ```
 
-## Deploy with pm2
+## 单元测试
 
-Use pm2 to deploy app on production enviroment.
+请参考package.json中的nyc, script.test的变动，以及需要把ava和nyc升级到最新版本。
 
 ```
-pm2 startOrReload pm2.json
+ "scripts": {
+    "test": "set THINK_UNIT_TEST=true && nyc ava test/ && nyc report --reporter=html",
+  },
+  "nyc": {
+    "include": [
+      "src/model/*.js",
+      "src/controller/*.js",
+      "src/service/*.js"
+    ],
+    "sourceMap": false
+  }
 ```

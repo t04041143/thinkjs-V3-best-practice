@@ -63,9 +63,6 @@
       "src/controller/*.js",
       "src/service/*.js"
     ],
-    "require": [
-      "babel-register"
-    ],
     "sourceMap": false
   }
 }
