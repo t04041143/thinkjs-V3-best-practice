@@ -5,7 +5,7 @@
   "author": "04041143 <04041143@163.com>",
   "scripts": {
     "start": "node development.js",
-    "test": "THINK_UNIT_TEST=1 nyc ava test/ && nyc report --reporter=html",
+    "test": "set THINK_UNIT_TEST=true && nyc ava test/ && nyc report --reporter=html",
     "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/",
     "lint": "eslint src/",
     "lint-fix": "eslint --fix src/"
@@ -28,13 +28,13 @@
   },
   "devDependencies": {
     "apidoc": "^0.17.6",
-    "ava": "^0.18.0",
+    "ava": "^0.25.0",
     "babel-cli": "^6.24.1",
     "babel-preset-think-node": "^1.0.0",
     "eslint": "^4.2.0",
     "eslint-config-think": "^1.0.0",
     "node-notifier": "^5.0.2",
-    "nyc": "^7.0.0",
+    "nyc": "^11.4.1",
     "think-babel": "^1.0.3",
     "think-inspect": "0.0.2",
     "think-watcher": "^3.0.0"
@@ -56,5 +56,16 @@
     "cacheTemplatePath": "C:\\Users\\04041\\.think-templates\\C--Users-04041-AppData-Roaming-npm-node_modules-think-cli-default_template",
     "clone": false,
     "isMultiModule": false
+  },
+  "nyc": {
+    "include": [
+      "src/model/*.js",
+      "src/controller/*.js",
+      "src/service/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false
   }
 }

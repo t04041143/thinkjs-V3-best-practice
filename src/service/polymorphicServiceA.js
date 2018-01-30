@@ -4,6 +4,6 @@ module.exports = class extends think.Service {
     }
 
     sayHello(){
-        return "I am server A";
+        return "I am service A";
     }
 };
