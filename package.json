@@ -5,7 +5,7 @@
   "author": "04041143 <04041143@163.com>",
   "scripts": {
     "start": "node development.js",
-    "test": "set THINK_UNIT_TEST=true && nyc ava test/ && nyc report --reporter=html",
+    "test": "set THINK_UNIT_TEST=true && nyc ava test/scripts/ && nyc report --reporter=html",
     "compile": "babel --no-babelrc src/ --presets think-node --out-dir app/",
     "lint": "eslint src/",
     "lint-fix": "eslint --fix src/"
